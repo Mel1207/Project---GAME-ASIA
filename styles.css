@@ -1,0 +1,399 @@
+/* --------Basic setup--------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    background: linear-gradient(to right, #000000, #434343);
+    color: rgb(194, 194, 194);
+    scroll-behavior: smooth;
+}
+
+/* --------Nav setup--------- */
+nav {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.coloredNav {
+    background-color: rgb(20, 20, 20);
+    transition: 1s ease;
+}
+.logo {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgb(194, 194, 194);
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+.nav-links li {
+    list-style: none;
+}
+.nav-links a {
+    text-decoration: none;
+    font-size: 17px;
+    color: rgb(194, 194, 194);
+}
+.nav-links a:hover {
+    border-bottom: 2px solid #302b63;
+    transition: 0.5s ease;
+    padding: 5px 0;
+}
+
+/* --------Menu setup--------- */
+.menu {
+    display: none;
+    cursor: pointer;
+    z-index: 1;
+}
+.menu div {
+    width: 30px;
+    height: 4px;
+    background-color: rgb(194, 194, 194);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* --------Header--------- */
+.containerHeader {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(/img/bgHead.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.showcase {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    color: rgb(194, 194, 194);
+    position: absolute;
+}
+.showText1 {
+    margin-top: 10%;
+    font-size: 80px;
+    letter-spacing: 10px;
+    animation-name: fadeInShow;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInShow {
+    0% {
+        opacity: 0;
+        margin-top: 10%;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 20%;
+    }
+}
+.showText2 {
+    font-size: 60px;
+    letter-spacing: 10px;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        font-size: 55px;
+    }
+    100% {
+        opacity: 1;
+        font-size: 45px;
+    }
+}
+.showcase i {
+    color: #fff;
+    opacity: 0.2;
+    padding-top: 7%;
+    font-size: 60px;
+}
+.showcase #down-arrow {
+    animation: bounce 4s infinite;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateY(-50px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    75% {
+        transform: translateY(-70px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* --------About--------- */
+.About .containerAbout {
+    width: 70%;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+.containerAbout h2 {
+    padding: 25px;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+.containerAbout p {
+    width: 80%;
+    margin-left: 10%;
+}
+.About .container {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+}
+.container div {
+    padding: 20px;
+    width: 50%;
+    height: auto;
+}
+.container img {
+    height: 350px;
+    width: 85%;
+}
+.container h2 {
+    font-size: 25px;
+    padding: 5px 0;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 100;
+}
+.container p {
+    margin: 20px 0;
+}
+.container a {
+    text-decoration: none;
+    font-size: 18px;
+    border: 2px solid #302b63;
+    color: #302b63;
+    border-radius: 10px;
+    padding: 7px;
+}
+.container a:hover {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    border: transparent;
+    transition: 0.5s ease;
+}
+
+/* Facilities Section */
+.facilities h2 {
+    font-size: 40px;
+    padding: 3% 0;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 100;
+}
+.container1 {
+    display: flex;
+    width: 100%;
+}
+.container1 img {
+    height: 400px;
+    width: 25%;
+    margin-bottom: 20px;
+}
+
+/* Pricing */
+.pricing h2 {
+    font-size: 40px;
+    padding: 10px 0;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 100;
+}
+.containerPrice {
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-around;
+    color: rgb(37, 37, 37);
+}
+.containerPrice .box {
+    height: 350px;
+    width: 100%;
+    margin: 20px;
+    background-color: rgb(233, 233, 233);
+    text-align: center;
+}
+.containerPrice .priceBox {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    height: 30%;
+    color: #fff;
+    position: relative;
+}
+.priceBox .box-title {
+    padding-top: 15px;
+}
+.priceBox span {
+    font-size: 30px;
+    color: #F39C12;
+}
+.box ul {
+    margin-bottom: 25px;
+}
+.box ul li {
+    list-style: none;
+    font-size: 18px;
+    margin-top: 15px
+}
+.box ul i {
+    color: #F39C12;
+    margin-right: 5px;
+}
+.box a {
+    text-decoration: none;
+    font-size: 18px;
+    border: 2px solid #302b63;
+    color: #302b63;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 7px;
+}
+.box a:hover {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    border: transparent;
+    transition: 0.5s ease;
+}
+
+/* contacts */
+.contacts {
+    height: 500px;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/img/contactBg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+form {
+    margin: 0 10%;
+    
+}
+.containerInput {
+    display: flex;
+    width: 100%;
+}
+.containerInput .box1 {
+    background-color: transparent;
+    margin: 20px;
+    height: 400px;
+    width: 100%;
+    /* display: none; */
+}
+.containerInput .box2 {
+    background-color: rgba(20, 20, 20, 0.9);
+    margin: 20px;
+    height: 450px;
+    width: 100%;
+}
+.box2 {
+    text-align: center;
+}
+.box2 h2 {
+    margin: 15px 0;
+}
+.box2 div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+}
+.box2 div input {
+    margin: 10px 0;
+    height: 30px;
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    border-bottom: 2px solid #302b63;
+}
+.box2 div textarea {
+    margin: 10px 0;
+    height: 100px;
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    border-bottom: 2px solid #302b63;
+    margin-bottom: 50px;
+}
+.box2 a {
+    text-decoration: none;
+    font-size: 18px;
+    border: 2px solid #302b63;
+    color: #302b63;
+    border-radius: 10px;
+    padding: 7px;
+}
+.box2 a:hover {
+    background: #302b63;
+    color: #fff;
+    border: transparent;
+    transition: 0.5s ease;
+}
+
+/* Footer */
+.containerFooter {
+    text-align: center;
+    align-items: center;
+    height: 150 px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(20, 20, 20, 0.8);
+}
+.containerFooter ul {
+    color: rgb(194, 194, 194);
+}
+.containerFooter ul li {
+    list-style: none;
+    font-size: 40px;
+    display: inline-block;
+    padding: 10px;
+}
+.containerFooter ul li a{
+    text-decoration: none;
+    color: rgb(194, 194, 194);
+}
+.containerFooter ul li a:hover {
+    color: #302b63;
+    transition: color 0.5s;
+}
+.containerFooter h4 {
+    margin-top: 20px;
+    color: rgb(194, 194, 194);
+}
+.containerFooter h5 {
+    margin-bottom: 20px;
+}

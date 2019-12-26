@@ -1,0 +1,309 @@
+/* ----------Bigger Screen---------- */
+@media screen and (max-width: 1200px) {
+    .showText1 {
+        margin-top: 40%;
+        font-size: 80px;
+        letter-spacing: 10px;
+    }
+    .showText2 {
+        font-size: 45px;
+        letter-spacing: 10px;
+    }
+    .showcase i {
+        opacity: 0.2;
+        padding-top: 7%;
+        font-size: 60px;
+    }
+    .nav-links {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    /* small screen setup header */
+    .showText1 {
+        animation-name: fadeInShow;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeInShow {
+        0% {
+            opacity: 0;
+            margin-top: 10%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 40%;
+        }
+    }
+    /* small screen setup about section */
+    .containerPrice .box {
+        height: 330px;
+    }
+    .container div {
+        height: 80%;
+    }
+    .container img {
+        height: 300px;
+    }
+    /* small screen setup for facilities */
+    .container1 img {
+        height: 350px;
+    }
+    /* small Screen setup for pricing secton */
+    .priceBox span {
+        font-size: 25px;
+    }
+    .box ul li {
+        font-size: 16px;
+    }
+}
+/* ----------Tablet Screen---------- */
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 9vh;
+        background-color: rgb(20, 20, 20);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .menu {
+        display: block;
+    }
+    /* ----------Showcase---------- */
+    .showText1 {
+        font-size: 60px;
+        animation-name: fadeInShow;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeInShow {
+        0% {
+            opacity: 0;
+            margin-top: 10%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 25%;
+        }
+    }
+    .showText2 {
+        animation-name: fadeIn;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            font-size: 50px;
+        }
+        100% {
+            opacity: 1;
+            font-size: 35px;
+        }
+    }
+    .showcase {
+        margin-top: 30%;
+    }
+    /* About setup for tablets */
+    .container {
+        flex-direction: column;
+    }
+    .container div {
+        width: 100%;
+        padding: 10px;
+    }
+    .container img {
+        height: 270px;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .container h2 {
+        font-size: 20px;
+        padding: 5px 0;
+        letter-spacing: 2px;
+        text-align: left;
+        font-weight: 90;
+    }
+    .containerAbout p {
+        margin: 0;
+        width: fit-content;
+    }
+    .container p {
+        margin: 15px 0;
+    }
+    .container1 img {
+        width: 25%;
+        height: 250px;
+    }
+    /* Pricing Setup for tablets */
+    .containerPrice .box {
+        margin: 10px 5px 20px 0;
+        height: 250px;
+    }
+    .priceBox span {
+        font-size: 25px;
+        color: #F39C12;
+    }
+    .box ul li {
+        list-style: none;
+        font-size: 12px;
+        margin-top: 10px
+    }
+    .box a {
+        text-decoration: none;
+        font-size: 15px;
+        border: 2px solid #302b63;
+        color: #302b63;
+        border-radius: 10px;
+        margin-top: 10px;
+        padding: 5px;
+    }
+    /* Contacts Setup for tablets */
+    .containerInput .box1 {
+        display: none;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+    width: 50%;
+    background-color: rgb(20, 20, 20);
+}
+
+/* ----------Animations---------- */
+@keyframes linkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* ----------Togglers---------- */
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+/* smartphones setup */
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+    .showcase {
+        margin-top: 70%;
+    }
+    .showText1 {
+        font-size: 30px;
+        animation-name: fadeInShow;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeInShow {
+        0% {
+            opacity: 0;
+            margin-top: 10%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    .showText2 {
+        font-size: 25px;
+        animation-name: fadeIn;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            font-size: 20px;
+        }
+        100% {
+            opacity: 1;
+            font-size: 17px;
+        }
+    }
+    .showcase i {
+        margin-top: 30px;
+        font-size: 45px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    /* About setup for smartphones */
+    .containerAbout h2 {
+        font-size: 25px;
+    }
+    .containerAbout p {
+        font-size: 15px;
+        margin-left: 0;
+    }
+    .container img {
+        height: 250px;
+    }
+    .container h2 {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .container p {
+        margin: 15px 0;
+    }
+    /* Facilities Setup for smartphones */
+    .facilities h2 {
+        font-size: 25px;
+        padding: 20px 0;
+    } 
+    .container1 {
+        flex-direction: column;
+    }
+    .container1 img {
+        width: 100%;
+        height: 300px;
+        margin: 0;
+    }
+    /* Pricing setup for smarthphones */
+    .pricing h2 {
+        font-size: 25px;
+        padding: 20px 0 10px 0;
+    }
+    .containerPrice {
+        flex-direction: column;
+    }
+    .containerPrice .box {
+        height: 300px;
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .box ul li {
+        font-size: 15px
+    }
+    .containerInput .box1 {
+        display: none;
+    }
+    .containerInput .box2 {
+        margin: 20px 0;
+    }
+}
